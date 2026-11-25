@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roofing Company | Denver Roof Repair & Replacement</title>
+<meta name="description" content="Family-owned Denver roofer. Hail damage, roof replacement and repair. Free inspections.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   EDIT ONLY THE CONFIG BLOCK IN THE <script> AT THE BOTTOM.
+   Everything on the page fills in from it.
+   ========================================================= */
+:root{
+  --brand:#c2410c;       /* overwritten by config.color */
+  --ink:#1c1917;
+  --muted:#57534e;
+  --paper:#fafaf9;
+  --line:#e7e5e4;
+  --dark:#1c1917;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Archivo,Inter,sans-serif;line-height:1.1;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:16px}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+/* top bar */
+.topbar{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:Archivo,Inter,system-ui,sans-serif;font-weight:800;font-size:20px;text-decoration:none}
+.logo span{color:var(--brand)}
+.topbar nav{display:flex;gap:24px;align-items:center;font-weight:500;font-size:15px}
+.topbar nav a{text-decoration:none;color:var(--muted)}
+.topbar nav a:hover{color:var(--ink)}
+.topbar .call{color:var(--brand)!important;font-weight:700}
+@media(max-width:760px){.topbar nav a:not(.call){display:none}}
+
+/* hero */
+.hero{background:linear-gradient(180deg,rgba(28,25,23,.78),rgba(28,25,23,.88)),url('https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1800&q=70') center/cover;color:#fff;padding:88px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.12);padding:6px 12px;border-radius:99px;margin-bottom:18px}
+.hero h1{font-size:clamp(34px,5vw,56px);font-weight:800;margin-bottom:18px}
+.hero p.lead{font-size:19px;color:#e7e5e4;max-width:540px;margin-bottom:28px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:32px;font-size:14px;color:#d6d3d1}
+.trust b{color:#fff;font-size:20px;display:block;font-family:Archivo,Inter,system-ui,sans-serif}
+
+/* quote card */
+.quote{background:#fff;color:var(--ink);border-radius:14px;padding:28px;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.quote h2{font-size:24px;margin-bottom:6px}
+.quote p{color:var(--muted);font-size:14px;margin-bottom:18px}
+.quote label{display:block;font-size:13px;font-weight:600;margin:12px 0 5px}
+.quote input,.quote select,.quote textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:16px;background:#fff}
+.quote input:focus,.quote select:focus,.quote textarea:focus{outline:2px solid var(--brand);border-color:transparent}
+.quote .btn{width:100%;justify-content:center;margin-top:18px}
+.quote small{display:block;text-align:center;color:var(--muted);margin-top:10px;font-size:12px}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero{padding:56px 0 64px}}
+
+/* sections */
+section{padding:80px 0}
+.sec-head{max-width:640px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(28px,3.5vw,40px);margin-bottom:10px}
+.sec-head p{color:var(--muted);font-size:17px}
+.kicker{color:var(--brand);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;display:block}
+
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}
+.card .ico{width:44px;height:44px;border-radius:10px;background:color-mix(in srgb,var(--brand) 12%,#fff);color:var(--brand);display:grid;place-items:center;font-size:22px;margin-bottom:14px}
+.card h3{font-size:19px;margin-bottom:6px}
+.card p{color:var(--muted);font-size:15px}
+
+/* storm band */
+.storm{background:var(--dark);color:#fff}
+.storm .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.storm h2{font-size:clamp(28px,3.5vw,40px);margin-bottom:14px}
+.storm p{color:#d6d3d1;margin-bottom:22px}
+.steps{list-style:none;display:grid;gap:14px}
+.steps li{display:flex;gap:14px;background:rgba(255,255,255,.06);padding:16px;border-radius:10px}
+.steps .n{flex:none;width:32px;height:32px;border-radius:50%;background:var(--brand);display:grid;place-items:center;font-weight:700}
+.steps b{display:block}
+.steps span{color:#d6d3d1;font-size:14px}
+@media(max-width:900px){.storm .wrap{grid-template-columns:1fr}}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.review .stars{color:#f59e0b;letter-spacing:2px;margin-bottom:10px}
+.review p{font-size:15px;margin-bottom:14px}
+.review .who{font-weight:600;font-size:14px}
+.review .who span{color:var(--muted);font-weight:400}
+
+/* areas */
+.areas{display:flex;flex-wrap:wrap;gap:10px}
+.areas span{background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:99px;font-size:14px}
+
+/* cta band */
+.cta-band{background:var(--brand);color:#fff;text-align:center;padding:64px 0}
+.cta-band h2{font-size:clamp(26px,3.5vw,38px);margin-bottom:10px}
+.cta-band p{opacity:.9;margin-bottom:24px}
+.cta-band .btn{background:#fff;color:var(--brand)}
+
+footer{background:var(--dark);color:#a8a29e;padding:40px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer b{color:#fff}
+
+/* sticky mobile call bar */
+.mobile-call{display:none}
+@media(max-width:760px){
+  .mobile-call{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;background:#fff;border-top:1px solid var(--line);padding:10px;gap:10px}
+  .mobile-call a{flex:1;justify-content:center}
+  body{padding-bottom:72px}
+}
+.demo-flag{background:#fef3c7;color:#92400e;text-align:center;font-size:13px;padding:8px 12px}
+</style>
+</head>
+<body>
+
+<div class="demo-flag" id="demoFlag">Website preview prepared for <b data-k="name"></b> — not yet live.</div>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="#" id="logo"></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#storm">Hail damage</a>
+      <a href="#reviews">Reviews</a>
+      <a class="call" data-tel>📞 <span data-k="phone"></span></a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><span data-k="badge"></span></span>
+      <h1 id="headline"></h1>
+      <p class="lead" id="subhead"></p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#quote">Get my free inspection</a>
+        <a class="btn btn-ghost" data-tel>Call <span data-k="phone"></span></a>
+      </div>
+      <div class="trust" id="trust"></div>
+    </div>
+    <form class="quote" id="quote" onsubmit="return sendQuote(event)">
+      <h2>Free roof inspection</h2>
+      <p>Tell us a bit about your roof. We reply the same business day.</p>
+      <label for="fn">Name</label><input id="fn" required autocomplete="name">
+      <label for="fp">Phone</label><input id="fp" type="tel" required autocomplete="tel">
+      <label for="fa">Address or ZIP</label><input id="fa" autocomplete="postal-code">
+      <label for="fs">What do you need?</label>
+      <select id="fs"><option>Hail / storm damage</option><option>Roof replacement</option><option>Leak or repair</option><option>Not sure — inspection</option></select>
+      <button class="btn btn-primary" type="submit">Request inspection</button>
+      <small>No obligation. We never share your info.</small>
+    </form>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker">What we do</span><h2>Roofing done right the first time</h2><p id="servicesIntro"></p></div>
+    <div class="services" id="servicesGrid"></div>
+  </div>
+</section>
+
+<section class="storm" id="storm">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Hail season</span>
+      <h2>Hail hit your roof? We handle the insurance claim with you.</h2>
+      <p>Colorado hail damage is often invisible from the ground. A free inspection tells you if you have a claim before your deadline runs out.</p>
+      <a class="btn btn-primary" href="#quote">Book a free hail inspection</a>
+    </div>
+    <ol class="steps">
+      <li><span class="n">1</span><div><b>Free inspection</b><span>We photograph every bit of damage on your roof.</span></div></li>
+      <li><span class="n">2</span><div><b>Claim support</b><span>We meet your adjuster and document everything.</span></div></li>
+      <li><span class="n">3</span><div><b>New roof, often in a day</b><span>You pay your deductible. We handle the rest.</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker">Reviews</span><h2>What your neighbors say</h2></div>
+    <div class="reviews" id="reviewsGrid"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker">Service area</span><h2>Serving the Denver metro</h2></div>
+    <div class="areas" id="areas"></div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap">
+    <h2>Not sure what your roof needs?</h2>
+    <p>Get a free, no-pressure inspection from a local, family-owned crew.</p>
+    <a class="btn" data-tel>📞 Call <span data-k="phone"></span></a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div><b data-k="name"></b><br><span data-k="address"></span></div>
+    <div>Licensed &amp; insured · <span data-k="phone"></span><br>© <span id="yr"></span> <span data-k="name"></span></div>
+  </div>
+</footer>
+
+<div class="mobile-call">
+  <a class="btn btn-primary" data-tel>📞 Call now</a>
+  <a class="btn" href="#quote" style="border-color:var(--line)">Free quote</a>
+</div>
+
+<script>
+/* ===================== CONFIG — edit per prospect ===================== */
+const config = {
+  name:     "Summit Ridge Roofing",
+  phone:    "(303) 555-0142",
+  email:    "office@example.com",      // where quote requests go
+  address:  "Denver, CO",
+  city:     "Denver",
+  color:    "#c2410c",                  // match their logo/brand color
+  years:    "20+",
+  badge:    "Family-owned · Denver since 2004",
+  headline: "Denver's hail-damage roofers. Free inspection, honest answer.",
+  subhead:  "Family-owned and local. We find the damage, work with your insurance, and replace your roof without the runaround.",
+  trust:    [["20+","years in Denver"],["4.9★","Google rating"],["Licensed","& fully insured"]],
+  servicesIntro: "Residential roofing across the Denver metro, from a single leak to a full tear-off.",
+  services: [
+    ["🏠","Roof replacement","Full tear-off and install with a manufacturer warranty."],
+    ["🧊","Hail & storm damage","Free inspections and full insurance-claim support."],
+    ["🔧","Roof repair","Leaks, missing shingles and flashing, fixed fast."],
+    ["🌧️","Gutters","Seamless gutters sized for Colorado snowmelt."]
+  ],
+  reviews: [   // use REAL reviews from their Google/Angi profile, with first name + initial
+    ["They found hail damage two other roofers missed and handled everything with my insurance.","Sarah M.","Lakewood"],
+    ["On time, cleaned up perfectly, and the price matched the quote.","David R.","Aurora"],
+    ["Honest crew. They told me I only needed a repair, not a new roof.","Jen K.","Denver"]
+  ],
+  areas: ["Denver","Aurora","Lakewood","Littleton","Arvada","Westminster","Thornton","Englewood","Centennial","Highlands Ranch"],
+  showDemoBanner: true
+};
+/* ===================================================================== */
+
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+document.documentElement.style.setProperty('--brand',config.color);
+document.title = `${config.name} | ${config.city} Roof Repair & Replacement`;
+$$('[data-k]').forEach(el=>el.textContent=config[el.dataset.k]??'');
+$$('[data-tel]').forEach(a=>a.href='tel:'+config.phone.replace(/[^\d+]/g,''));
+const parts=config.name.split(' '); const last=parts.pop();
+$('#logo').innerHTML=`${parts.join(' ')} <span>${last}</span>`;
+$('#headline').textContent=config.headline;
+$('#subhead').textContent=config.subhead;
+$('#servicesIntro').textContent=config.servicesIntro;
+$('#trust').innerHTML=config.trust.map(([b,t])=>`<div><b>${b}</b>${t}</div>`).join('');
+$('#servicesGrid').innerHTML=config.services.map(([i,h,p])=>`<div class="card"><div class="ico">${i}</div><h3>${h}</h3><p>${p}</p></div>`).join('');
+$('#reviewsGrid').innerHTML=config.reviews.map(([t,n,c])=>`<div class="card review"><div class="stars">★★★★★</div><p>“${t}”</p><div class="who">${n} <span>· ${c}</span></div></div>`).join('');
+$('#areas').innerHTML=config.areas.map(a=>`<span>${a}</span>`).join('');
+$('#yr').textContent=new Date().getFullYear();
+if(!config.showDemoBanner) $('#demoFlag').remove();
+
+function sendQuote(e){
+  e.preventDefault();
+  const body=`Name: ${fn.value}%0APhone: ${fp.value}%0AAddress: ${fa.value}%0ANeed: ${fs.value}`;
+  location.href=`mailto:${config.email}?subject=Free inspection request&body=${body}`;
+  return false;
+}
+</script>
+</body>
+</html>
